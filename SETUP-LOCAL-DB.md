@@ -25,6 +25,7 @@ Para usar la aplicación con una base de datos SQL Server local en Windows 11, n
 
 1. Abre SSMS
 2. Conecta con:
+
    - Server name: `localhost` o `localhost\\SQLEXPRESS`
    - Authentication: SQL Server Authentication
    - Login: `sa`
@@ -51,11 +52,12 @@ sqlcmd -S localhost -U sa -P "Pollito92." -i server/scripts/init-local-db.sql
 Después de ejecutar el script de inicialización, tendrás estos usuarios:
 
 - **Administrador:**
+
   - Email: `admin@lasalle.edu.mx`
   - Password: `admin123`
 
 - **Estudiante:**
-  - Email: `estudiante@lasalle.edu.mx`  
+  - Email: `estudiante@lasalle.edu.mx`
   - Password: `admin123`
 
 ## Configuración Actual
@@ -71,16 +73,19 @@ La aplicación está configurada para conectarse a:
 ## Solución de Problemas
 
 ### Error de Conexión
+
 - Verifica que SQL Server esté ejecutándose en Servicios de Windows
 - Busca "SQL Server (SQLEXPRESS)" en Servicios
 - Asegúrate de que esté iniciado
 
 ### Puerto 1433 Bloqueado
+
 - Abre Windows Firewall
 - Permite la aplicación "SQL Server"
 - O crea una regla para el puerto 1433
 
 ### Autenticación
+
 - Verifica que el modo mixto esté habilitado
 - Confirma que el usuario `sa` esté habilitado
 - Verifica la contraseña
